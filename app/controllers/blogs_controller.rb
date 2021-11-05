@@ -4,6 +4,7 @@ class BlogsController < ApplicationController
   end
 
   def edit
+    @blog = Blog.find(params[:id])
   end
 
   def show
@@ -12,6 +13,12 @@ class BlogsController < ApplicationController
 
   def new
     @blog = Blog.new
+  end
+
+  def update
+    blog = Blog.find(params[:id])
+    blog.update(blog_params) #ストロングパラムで受け取る
+    redirect_to blog_path(blog.id)
   end
 
   def create
