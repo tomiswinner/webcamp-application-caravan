@@ -52,7 +52,7 @@
         <% @blog.body %>
       </p>
       <%= link_to "編集",edit_blog_path(@blog.id) %>
-      <a href="#">削除</a>
+      <%= link_to "削除",blog_path(@blog.id),method: :delete %> <!-- httpリクエストの内容を変えるだけなので、パス自体は詳細ページと同じになる-->
       <div class="author-case">
         <div class="author-image"></div>
         <div class="author-box">

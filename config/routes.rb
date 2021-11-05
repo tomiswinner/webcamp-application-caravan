@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   #                   blog GET    /blogs/:id(.:format)                     blogs#show
   #                         PATCH  /blogs/:id(.:format)                     blogs#update
   #                         PUT    /blogs/:id(.:format)                   blogs#update
-  #                         DELETE /blogs/:id(.:format)
+  #                         DELETE /blogs/:id(.:format)             blogs#destroy
 
 
 
